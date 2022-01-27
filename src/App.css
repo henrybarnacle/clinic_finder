@@ -28,6 +28,84 @@
   color: #61dafb;
 }
 
+.map-container {
+  width: 330px;
+  height: 200px;
+}
+
+.bookmark {
+  font-size: 34px;
+  float: right;
+  cursor: pointer;
+}
+
+.description-heading {
+  color: #196ECF;
+}
+
+.detail-address {
+  width: 30%;
+  font-size: 14px;
+}
+
+.detail-contact {
+  font-size: 14px;
+  float: right;
+  width: 30%;
+}
+
+.display-spinner {
+  display: grid;
+  place-items: center;
+}
+
+.typeahead-dropdown {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.73);
+}
+  
+.typeahead-dropdown input{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.73);
+    padding: 10px 5px ;
+    box-sizing: border-box;
+    outline: none; 
+} 
+.typeahead-dropdownul::before{
+    content: '';
+}
+  
+.typeahead-dropdown ul{
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border: 1px solid gray; 
+    border-top: none;
+    box-shadow: 0 0 1px rgba(0,0,0,0.1), 0 2px 4px 1px rgba(0,0,0, .16);
+}
+  
+.typeahead-dropdown li{
+    padding: 10px 5px ;
+    cursor: pointer;
+}
+  
+.typeahead-dropdown li:hover{
+    background: lightgray;
+    text-decoration: underline;
+}
+.hide-list {
+   display: none;
+}
+  
+.App {
+    margin: 150px auto 0 auto;
+    width: 600px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

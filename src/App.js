@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import mapboxgl from 'mapbox-gl'; 
+import { mapboxglAccessToken } from './config/keys';
+import ClinicDetail from './components/ClinicDetail';
+import ClinicSearch from './components/ClinicSearch';
+import Header from './components/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+mapboxgl.accessToken = mapboxglAccessToken;
+
+const App = () => {
+
+    return (
+        <div className="ui container">   
+            <BrowserRouter>
+                <div>
+                    <Header/>
+                    <Routes>
+                      <Route path="/" element={<ClinicSearch />}></Route>
+                      <Route path="/detail" element={<ClinicDetail/>}></Route>
+                    </Routes>
+                </div>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
